@@ -2,15 +2,19 @@ pipeline
 {
   agent any
     stages{
-      stage ('Git pull'){
+      stage ('build'){
         steps{
-          sh 'git pull origin master'
+          echo 'building... ...'
         }
         }
-      stage('Display Content'){
+      stage('test'){
         steps{
-          sh 'cat file1'
+          echo 'testing... ...'
         }
+      }
+      stage('deploy')
+      stepe{
+        echo 'deploying.........'
       }
     }
 }
