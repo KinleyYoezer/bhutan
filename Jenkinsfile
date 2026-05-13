@@ -2,9 +2,12 @@ pipeline
 {
   agent any
     stages{
-      stage('hello'){
+      stage ('Git pull'){
+        sh 'git pull origin master'
+      }
+      stage('Display Content'){
         steps{
-          echo 'Auto Build'
+          sh 'cat file1'
         }
       }
     }
